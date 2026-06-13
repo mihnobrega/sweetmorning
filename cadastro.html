@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Morning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="entrar.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-mug-hot logo-icon"></i>
+                <div class="logo-text">Sweet <span>Morning</span></div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="entrar.html" class="btn btn-secundary">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="login-box">
+            <div class="top">
+
+                <span>
+                    Já possui uma conta?
+                    <a href="entrar.html">Login</a>
+                </span>
+
+                <h4>Sign Up</h4>
+                <p>
+                    Crie sua conta para acessar o sistema.
+                </p>
+            </div>
+
+            <form action="cadastro.php" method="POST">
+                <div class="input-box">
+                    <input
+                        type="text"
+                        name="nome"
+                        class="input-field"
+                        placeholder="Nome"
+                        required
+                    >
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input
+                        type="text"
+                        name="sobrenome"
+                        class="input-field"
+                        placeholder="Sobrenome"
+                        required
+                    >
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input
+                        type="email"
+                        name="email"
+                        class="input-field"
+                        placeholder="Email"
+                        required
+                    >
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <div class="input-box">
+                    <input
+                        type="password"
+                        name="senha"
+                        class="input-field"
+                        placeholder="Senha"
+                        required
+                    >
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" id="btnCadastrar" class="submit-btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    document.getElementById('btnCadastrar').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = "pagCliente.html";
+    });
+</script>
+</body>
+</html>
