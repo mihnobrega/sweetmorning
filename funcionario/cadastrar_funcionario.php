@@ -1,15 +1,24 @@
-<?php 
+<?php
 
-include("../db/conexao.php"); ?>
+include("../db/conexao.php");
+
+?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
 
-    <title>Cadastrar Funcionários</title>
+    <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="painel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Funcionário</title>
+
+    <link rel="stylesheet" href="../painel.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -19,7 +28,11 @@ include("../db/conexao.php"); ?>
 
     <div class="page-header">
 
-        <h1>Cadastrar Funcionários</h1>
+        <h1>Cadastrar Funcionário</h1>
+
+        <p>
+            Adicione novos funcionários ao sistema Sweet Morning.
+        </p>
 
     </div>
 
@@ -29,35 +42,66 @@ include("../db/conexao.php"); ?>
         class="form-card"
     >
 
-        <input
-            type="text"
-            name="nome"
-            placeholder="Nome do Funcionario"
-            required
-        >
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-user"></i>
+                Nome do Funcionário
+            </label>
+
+            <input
+                type="text"
+                name="nome"
+                placeholder="Digite o nome completo"
+                required
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-envelope"></i>
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Digite o e-mail"
+                required
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+                <i class="fa-solid fa-lock"></i>
+                Senha
+            </label>
+
+            <input
+                type="password"
+                name="senha"
+                placeholder="Digite a senha"
+                required
+            >
+
+        </div>
 
         <input
-            type="email"
-            name="email"
-            placeholder="email"
-            required
-        >
-
-        <input
-            type="password"
-            name="senha"
-            placeholder="senha"
-            required
-        >
-
-        <input 
-        type="hidden"
-        name="tipo"
-        value="funcionario"
+            type="hidden"
+            name="tipo"
+            value="funcionario"
         >
 
         <button type="submit">
-            Salvar
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Cadastrar Funcionário
+
         </button>
 
     </form>
@@ -65,4 +109,5 @@ include("../db/conexao.php"); ?>
 </div>
 
 </body>
+
 </html>

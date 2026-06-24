@@ -13,7 +13,7 @@ $resultado = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Consultar Estoque</title>
-    <link rel="stylesheet" href="painel.css">
+    <link rel="stylesheet" href="../painel.css">
 </head>
 <body>
 

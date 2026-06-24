@@ -13,7 +13,7 @@ $resultado = $conn->query(
 
     <title><?php echo $labelTipo; ?></title>
 
-    <link rel="stylesheet" href="painel.css">
+    <link rel="stylesheet" href="../painel.css">
 
 </head>
 

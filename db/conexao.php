@@ -1,8 +1,8 @@
 <?php
 //informe os dados de conexão com o seu banco
-$servername = "";
-$username = "";
-$password = "";
+$servername = "mysql";
+$username = "root";
+$password = "brubru";
 $dbname = "sweetmorning";
 $port = "3306";
 

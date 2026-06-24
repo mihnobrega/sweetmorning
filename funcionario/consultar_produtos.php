@@ -13,7 +13,7 @@ $resultado = $conn->query("SELECT * FROM produtos");
 
     <title>Produtos</title>
 
-    <link rel="stylesheet" href="painel.css">
+    <link rel="stylesheet" href="../painel.css">
 
 </head>
 

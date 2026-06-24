@@ -9,7 +9,7 @@ include("../db/conexao.php"); ?>
 
     <title>Cadastrar Clientes</title>
 
-    <link rel="stylesheet" href="painel.css">
+    <link rel="stylesheet" href="../painel.css">
 
 </head>
 

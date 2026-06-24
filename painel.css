@@ -1,0 +1,626 @@
+:root{
+    --dark:#3e2723;
+    --medium:#6f4e37;
+    --gold:#d4af37;
+    --cream:#f5f5dc;
+    --text:#f3f3f3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    font-family:'Montserrat',sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b0705 0%,
+        #120d09 50%,
+        #000000 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.main{
+    width:100%;
+    max-width:650px;
+}
+
+.page-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    color:var(--gold);
+    font-size:42px;
+    font-family:'Playfair Display',serif;
+    margin-bottom:10px;
+}
+
+.page-header p{
+    color:#cfcfcf;
+}
+
+/* CARD */
+
+.form-card{
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* INPUTS */
+
+.form-card input{
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.form-card input:focus{
+    border-color:var(--gold);
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,.2);
+}
+
+.form-card input::placeholder{
+    color:#d0d0d0;
+}
+
+/* BOTÃO */
+
+.form-card button{
+    height:58px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--gold),
+        #b8860b
+    );
+
+    color:white;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.form-card button:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 30px rgba(212,175,55,.3);
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.input-group label{
+    color: var(--gold);
+    font-weight:600;
+    font-size:14px;
+}
+
+/* =========================
+   ESTOQUE
+========================= */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.input-group label{
+    color:var(--gold);
+
+    font-weight:600;
+
+    font-size:15px;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+}
+
+.input-group label i{
+    width:20px;
+}
+
+.form-card button i{
+    margin-right:10px;
+}
+
+/* EFEITO HOVER NOS INPUTS */
+
+.form-card input:hover{
+    background:rgba(255,255,255,0.12);
+}
+
+/* ANIMAÇÃO DO CARD */
+
+.form-card{
+    animation:fadeIn .6s ease;
+}
+
+/* =========================
+   CADASTRAR FUNCIONÁRIO
+========================= */
+
+.page-header h1{
+    position: relative;
+}
+
+.page-header h1::before{
+    content: "👨‍💼";
+
+    margin-right: 12px;
+}
+
+/* LABELS */
+
+.input-group label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--gold);
+
+    font-weight: 600;
+}
+
+/* ÍCONES */
+
+.input-group label i{
+    width: 20px;
+    text-align: center;
+}
+
+/* BOTÃO FUNCIONÁRIO */
+
+.form-card button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-card button::before{
+    content: "➕";
+}
+
+/* EFEITO NOS CAMPOS */
+
+.form-card input:hover{
+    background: rgba(255,255,255,0.12);
+}
+
+/* ANIMAÇÃO */
+
+.form-card{
+    animation: slideFuncionario .6s ease;
+}
+
+/* =========================
+   SELECT PEDIDOS
+========================= */
+
+.form-card select{
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.form-card select:focus{
+    border-color:var(--gold);
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,.2);
+}
+
+.form-card option{
+    background:#1a1a1a;
+    color:white;
+}
+
+/* =========================
+   TEXTAREA PRODUTOS
+========================= */
+
+.form-card textarea{
+    width:100%;
+
+    min-height:140px;
+
+    resize:vertical;
+
+    padding:18px 20px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:'Montserrat',sans-serif;
+}
+
+.form-card textarea::placeholder{
+    color:#d0d0d0;
+}
+
+.form-card textarea:focus{
+    border-color:var(--gold);
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,.2);
+}
+
+.form-card button i{
+    margin-right:10px;
+}
+
+/* =========================
+   CONSULTAR PESSOA
+========================= */
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0b0705 0%, #120d09 50%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 30px;
+}
+
+.main {
+    width: 100%;
+    max-width: 750px;
+}
+
+.main h1 {
+    text-align: center;
+    color: var(--gold);
+    font-size: 38px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.main h1::before {
+    content: "👨‍💼";
+    margin-right: 12px;
+}
+
+/* CARD DA TABELA */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+
+    animation: fadeIn .6s ease;
+}
+
+/* CABEÇALHO */
+
+thead tr {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+th {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+/* LINHAS */
+
+tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background .25s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* CÉLULAS */
+
+td {
+    color: var(--text);
+    font-size: 14px;
+    padding: 14px 20px;
+}
+
+td:first-child {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* =========================
+   CONSULTAR ESTOQUE
+========================= */
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+
+    animation: fadeIn .6s ease;
+}
+
+.tabela thead tr {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.tabela th {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.tabela tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background .25s;
+}
+
+.tabela tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabela tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tabela td {
+    color: var(--text);
+    font-size: 14px;
+    padding: 14px 20px;
+}
+
+.tabela td:first-child {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* =========================
+   CONSULTAR PRODUTOS
+========================= */
+
+.main h1 {
+    text-align: center;
+    color: var(--gold);
+    font-size: 38px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.main h1::before {
+    content: "☕";
+    margin-right: 12px;
+}
+
+.main table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+
+    animation: fadeIn .6s ease;
+}
+
+.main table thead tr {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.main table th {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.main table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background .25s;
+}
+
+.main table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.main table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.main table td {
+    color: var(--text);
+    font-size: 14px;
+    padding: 14px 20px;
+}
+
+.main table td:first-child {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* CATEGORIA — pílula sutil */
+
+.main table td:nth-child(3) {
+    font-size: 12px;
+    color: #cfcfcf;
+}
+
+/* PREÇO — destaque dourado */
+
+.main table td:last-child {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+@keyframes slideFuncionario{
+
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+
+    .page-header h1{
+        font-size:32px;
+    }
+
+    .form-card{
+        padding:25px;
+    }
+
+}
