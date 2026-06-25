@@ -31,7 +31,7 @@
 
         <nav>
             <ul>
-                <li><a href="pagCliente.html">Home</a></li>
+                <li><a href="pagCliente.php">Home</a></li>
                 <li><a href="salgados.html">Salgados</a></li>
                 <li><a href="doces.html">Doces</a></li>
                 <li><a href="bebidas.html">Bebidas</a></li>
